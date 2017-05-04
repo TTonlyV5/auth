@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	http://www.springframework.org/schema/mvc   http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+    http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-2.5.xsd " >
+
+   <!--开启springmvc注解模式-->
+   <!-- 扩充了注解驱动，可以将请求参数绑定到控制器参数 -->
+   <mvc:annotation-driven />
+    <!--
+        1、自动注册DefaultAnnotationMapping、AnnotationHandlerAdapter
+        2、提供一系列：数据绑定，数字和日期的farmat @NumberFormat @DateTimeFormat
+        3、xml、json默认读写支持
+    -->  
+   <!-- DispatcherServlet上下文， 只管理@Controller类型的bean， 忽略其他型的bean, 如@Service -->
+   <!--扫描web相关的bean-->
+   <context:component-scan base-package="com.mystudy.auth.controller">  
+   		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+   </context:component-scan>   
+   
+   	<!-- 静态资源处理， css， js， imgs -->
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/image/**" location="/image/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+   
+	<!-- 配置ViewResolver。 可以用多个ViewResolver。 使用order属性排序。 InternalResourceViewResolver放在最后。 -->		
+	<!-- 这个类用于Spring MVC视图解析 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+	<!--200*1024*1024即200M resolveLazily属性启用是为了推迟文件解析，以便捕获文件大小异常 -->
+<!-- 	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="209715200" />
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="resolveLazily" value="true" />
+	</bean> -->
+</beans>
