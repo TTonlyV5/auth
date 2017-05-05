@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>用户角色列表</title>
 </head>
-<body>
-用户角色列表
+<body>用户角色列表
 </body>
 </html>

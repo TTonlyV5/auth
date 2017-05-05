@@ -1,9 +1,13 @@
 package com.mystudy.auth.dao;
 
-import com.mystudy.auth.common.BaseDao;
-import com.mystudy.auth.entity.Role;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Collection;
+import java.util.List;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
@@ -11,15 +15,12 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.*;
-import java.util.Collection;
-import java.util.List;
+import com.mystudy.auth.common.BaseDao;
+import com.mystudy.auth.entity.Role;
 
 
 @Repository
 public class RoleDao extends BaseDao {
-    private Logger logger= LoggerFactory.getLogger(RoleDao.class);
-
     /**
      * Role的RowMapper映射类
      */
@@ -96,7 +97,6 @@ public class RoleDao extends BaseDao {
         ids.forEach((id) -> sb.append(id).append(","));
         sb.deleteCharAt(sb.length()-1);
         sb.append(")");
-        logger.info("findByIds sql"+sb);
         try {
             return jdbcTemplate.query(sb.toString(),new RoleRowMapper());
         } catch (DataAccessException e) {

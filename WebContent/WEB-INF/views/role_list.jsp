@@ -7,10 +7,13 @@
 <title>角色列表</title>
 </head>
 <body>
-<div>
-	<li><a href="role/getRoles">增加角色</a></li><!-- 让control拦截跳转到getRoles -->
-	<li><a href="role/addEditRole">编辑角色</a></li><!-- 让control拦截跳转到addEditRole -->
-	<li><a href="role/deleteEditRole">删除角色</a></li><!-- 让control拦截跳转到deleteEditRole -->
-</div>
+	<div>
+		<li><a href="role/getRoles">增加角色</a></li>
+		<!-- 让control拦截跳转到getRoles -->
+		<li><a href="role/addEditRole">编辑角色</a></li>
+		<!-- 让control拦截跳转到addEditRole -->
+		<li><a href="role/deleteEditRole">删除角色</a></li>
+		<!-- 让control拦截跳转到deleteEditRole -->
+	</div>
 </body>
 </html>

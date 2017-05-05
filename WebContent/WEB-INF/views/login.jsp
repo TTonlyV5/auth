@@ -7,17 +7,20 @@
 <title>Login</title>
 </head>
 <body>
-	<form action="main" method="post"><!-- springMVC的Controller的@RequestMapping中的值 跳转到main-->
+	<form action="main" method="post">
+		<!-- springMVC的Controller的@RequestMapping中的值 跳转到main-->
 		<fieldset>
-		<legend>创建用户</legend>
+			<legend>创建用户</legend>
 			<p>
-				<label>用户名：</label> <input type="text" id="name" name="name" tabindex="1">
+				<label>用户名：</label> <input type="text" id="name" name="name"
+					tabindex="1">
 			</p>
 			<p>
-				<label>密码：</label> <input type="text" id="password" name="password" tabindex="3">
+				<label>密码：</label> <input type="text" id="password" name="password"
+					tabindex="3">
 			</p>
 			<p id="buttons">
-			 <input id="submit" type="submit" tabindex="5" value="登陆">
+				<input id="submit" type="submit" tabindex="5" value="登陆">
 			</p>
 		</fieldset>
 	</form>

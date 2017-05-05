@@ -7,12 +7,17 @@
 <title>功能列表</title>
 </head>
 <body>
-<div>
-	<li><a href="functions/addFunction">增加功能</a></li><!-- 让control拦截跳转到addFunction -->
-	<li><a href="functions/deleteFunctionsById">根据id删除功能</a></li><!-- 让control拦截跳转到deleteFunctionsById -->
-	<li><a href="functions/findAllFunctions">查询全部功能</a></li><!-- 让control拦截跳转到findAllFunctions -->
-	<li><a href="functions/getSubFunctions">得到子菜单功能集合</a></li><!-- 让control拦截跳转到getSubFunctions -->
-	<li><a href="functions/buildMenuTreeForEdit">构建用于新建、修改使用的菜单（功能）树</a></li><!-- 让control拦截跳转到buildMenuTreeForEdit -->
-</div>
+	<div>
+		<li><a href="functions/addFunction">增加功能</a></li>
+		<!-- 让control拦截跳转到addFunction -->
+		<li><a href="functions/deleteFunctionsById">根据id删除功能</a></li>
+		<!-- 让control拦截跳转到deleteFunctionsById -->
+		<li><a href="functions/findAllFunctions">查询全部功能</a></li>
+		<!-- 让control拦截跳转到findAllFunctions -->
+		<li><a href="functions/getSubFunctions">得到子菜单功能集合</a></li>
+		<!-- 让control拦截跳转到getSubFunctions -->
+		<li><a href="functions/buildMenuTreeForEdit">构建用于新建、修改使用的菜单（功能）树</a></li>
+		<!-- 让control拦截跳转到buildMenuTreeForEdit -->
+	</div>
 </body>
 </html>

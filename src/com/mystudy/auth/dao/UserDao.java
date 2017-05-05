@@ -1,25 +1,21 @@
 package com.mystudy.auth.dao;
 
-import com.mystudy.auth.common.BaseDao;
-import com.mystudy.auth.entity.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Collection;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Collection;
+import com.mystudy.auth.common.BaseDao;
+import com.mystudy.auth.entity.User;
 
 /**
  * UserDao实体类
  */
 @Repository
 public class UserDao extends BaseDao {
-
-    private Logger logger= LoggerFactory.getLogger(UserDao.class);
-
     /**
      * UserRowMapper User对象的映射类
      */
@@ -104,7 +100,6 @@ public class UserDao extends BaseDao {
         ids.forEach((id) -> sql.append(id).append(","));
         sql.deleteCharAt(sql.length()-1);//删除最后一个分号
         sql.append(")");
-        logger.info("findByIds sql"+sql);
         return jdbcTemplate.query(sql.toString(),new UserRowMapper());
     }
 	/**

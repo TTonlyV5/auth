@@ -7,12 +7,17 @@
 <title>授权列表</title>
 </head>
 <body>
-<div>
-	<li><a href="authorize/userRole">用户角色首页</a></li><!-- 让control拦截跳转到user_role_list -->
-	<li><a href="authorize/getAuthorizes">删除角色</a></li><!-- 让control拦截跳转到getAuthorizes -->
-	<li><a href="authorize/getUserRoleBuUserId">根据用户id查询用户和角色的对应关系</a></li><!-- 让control拦截跳转到getUserRoleBuUserId -->
-	<li><a href="authorize/getAuthorizes">查询授权</a></li><!-- 让control拦截跳转到getAuthorizes -->
-    <li><a href="authorize/setAuthorize">设置授权</a></li><!-- 让control拦截跳转到setAuthorize -->	
-</div>
+	<div>
+		<li><a href="authorize/userRole">用户角色首页</a></li>
+		<!-- 让control拦截跳转到user_role_list -->
+		<li><a href="authorize/getAuthorizes">删除角色</a></li>
+		<!-- 让control拦截跳转到getAuthorizes -->
+		<li><a href="authorize/getUserRoleBuUserId">根据用户id查询用户和角色的对应关系</a></li>
+		<!-- 让control拦截跳转到getUserRoleBuUserId -->
+		<li><a href="authorize/getAuthorizes">查询授权</a></li>
+		<!-- 让control拦截跳转到getAuthorizes -->
+		<li><a href="authorize/setAuthorize">设置授权</a></li>
+		<!-- 让control拦截跳转到setAuthorize -->
+	</div>
 </body>
 </html>
