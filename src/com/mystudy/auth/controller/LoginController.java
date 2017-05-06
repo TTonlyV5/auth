@@ -40,7 +40,7 @@ public class LoginController {
 	@Autowired 
 	private RoleService roleService;
 	
-	@RequestMapping(value="",method=RequestMethod.GET)//value的值改成/index会进不去，不知道为什么
+	@RequestMapping(value="",method=RequestMethod.GET)//value的值改成/index会进不去
 	public ModelAndView index() {
 		if (UserContext.getCurrent()!=null&&UserContext.getCurrent().getUser()!=null) {
 			return new ModelAndView("/login");
